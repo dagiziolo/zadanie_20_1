@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background: skyblue">
+<div class="container">
+    <h1>Dodawanie produktów</h1>
+    <h4>Tu możesz dodać produkt</h4>
+    <form method="post" action="/add">
+
+            <div class="form-group">
+                <!--<label for="nameId">Nazwa</label>-->
+                <input type="text" name="name" class="form-control"  placeholder="Nazwa">
+            </div>
+            <div class="form-group">
+                <!--<label for="priceId">Cena</label>-->
+                <input type="text" name="price" class="form-control" placeholder="Cena">
+            </div>
+        <input type="submit" class="btn btn-primary" value="dodaj produkt" >
+    </form>
+    <h5><br/><br/>Odnośniki</h5>
+        <ul>
+            <li><a href="/lista">Wyświetl listę produktów</a> </li>
+            <li><a href="/tabela">Wyświetl tabelę produktów</a></li>
+        </ul>
+</div>
+</body>
+</html>

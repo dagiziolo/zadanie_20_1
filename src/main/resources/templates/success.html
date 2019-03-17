@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sukces</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background: skyblue" class="tex">
+<div class="container">
+    <a href="/">Przejdź do strony głównej</a>
+
+    <h1>Udało się dodać nowy produkt</h1>
+
+
+    <h2><br/>Dostępna lista produktów</h2>
+
+    <ul>
+        <li th:each="product: ${produkty}" th:text="|${product.getName()} w cenie ${product.getPrice()}|"></li>
+    </ul>
+    <p th:text="|Łączna wartość: ${suma}|"></p>
+
+
+</div>
+</body>
+</html>
