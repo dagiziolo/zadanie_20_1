@@ -13,6 +13,9 @@ import java.util.List;
 
 @Controller
 public class ProductController {
+
+    private List<Product> products = getProducts();
+
     @GetMapping("/")
     public String homepage() {
         return "productpage";
@@ -20,7 +23,7 @@ public class ProductController {
 
     @GetMapping("/lista")
     public String printListProduct(Model model) {
-        List<Product> products = getProducts();
+//        List<Product> products = getProducts();
         double price = getPrice(products);
 
         model.addAttribute("produkty", products);
@@ -31,7 +34,7 @@ public class ProductController {
 
     @GetMapping("/tabela")
     public String printTableProduct(Model model) {
-        List<Product> products = getProducts();
+//        List<Product> products = getProducts();
         double price = getPrice(products);
 
         model.addAttribute("produkty", products);
@@ -43,7 +46,7 @@ public class ProductController {
     @GetMapping("/add")
     public String addProduct(@RequestParam(value = "name") String name1, @RequestParam(value = "price") Double price1, Model model) {
         Product prd = new Product(name1, price1);
-        List<Product> products = getProducts();
+//        List<Product> products = getProducts();
         products.add(prd);
 
         double price = getPrice(products);
