@@ -16,6 +16,7 @@ public class ProductController {
 
     private List<Product> products = getProducts();
 
+    
     @GetMapping("/")
     public String homepage() {
         return "productpage";
